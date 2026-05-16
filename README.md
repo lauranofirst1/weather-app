@@ -1,5 +1,13 @@
 # Weather App
 
+## 배포 주소
+
+Vercel에 배포한 주소는 아래와 같다.
+
+```text
+https://weather-app-delta-seven-82.vercel.app
+```
+
 ## 실행 방법
 
 의존성을 설치한다.
@@ -31,6 +39,10 @@ npm run dev
 ```text
 http://localhost:3000
 ```
+
+## 배포 환경 변수
+
+Vercel 배포 환경에서는 `OPENWEATHER_API_KEY`를 Production Environment Variable로 등록해야 한다. `.env.local` 파일은 로컬 개발 환경에서만 사용하며, GitHub에는 업로드하지 않는다.
 
 ## 개념 설명
 
