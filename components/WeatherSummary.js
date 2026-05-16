@@ -2,6 +2,8 @@ import { formatTemperature } from '../lib/formatWeather'
 import WeatherIcon from './WeatherIcon'
 import styles from '../styles/Weather.module.css'
 
+// 상세 페이지 상단의 현재 날씨 카드이다.
+// API에서 받은 현재 온도, 체감 온도, 풍속, 습도, 인구수를 한 곳에 표시한다.
 export default function WeatherSummary({ city, dateTime, population, current }) {
   return (
     <section className={styles.summary} aria-label="Current weather">

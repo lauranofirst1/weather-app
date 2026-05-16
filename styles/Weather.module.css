@@ -1,3 +1,4 @@
+/* 상세 페이지 전체 배경이다. 작은 화면에서는 가로 스크롤을 허용한다. */
 .page {
   min-height: 100vh;
   background: #f6f3f0;
@@ -5,11 +6,13 @@
   overflow-x: auto;
 }
 
+/* 상세 페이지의 실제 레이아웃 컨테이너이다. 800px 미만에서도 폭을 유지한다. */
 .shell {
   min-width: 800px;
   padding: 42px 40px 92px;
 }
 
+/* 상단 지구 이미지와 제목을 세로로 배치한다. */
 .header {
   display: flex;
   flex-direction: column;
@@ -26,6 +29,7 @@
   letter-spacing: 0;
 }
 
+/* 상세 페이지 상단의 작은 지구 이미지 영역이다. */
 .logoImage {
   width: 54px;
   height: 42px;
@@ -36,6 +40,7 @@
   display: block;
 }
 
+/* 로딩/에러 메시지를 카드처럼 보여주는 안내 영역이다. */
 .notice {
   width: 100%;
   margin: 0 0 28px;
@@ -47,6 +52,7 @@
   text-align: center;
 }
 
+/* 현재 날씨 카드이다. 왼쪽은 도시/아이콘, 오른쪽은 온도 정보로 나눈다. */
 .summary {
   display: flex;
   align-items: center;
@@ -60,6 +66,7 @@
   background: #ffffff;
 }
 
+/* 현재 날씨 카드의 왼쪽 정보 묶음이다. */
 .summaryInfo {
   display: flex;
   align-items: center;
@@ -87,6 +94,7 @@
   font-weight: 700;
 }
 
+/* 현재 온도 영역은 시안처럼 오른쪽 정렬한다. */
 .temperature {
   text-align: right;
 }
@@ -105,6 +113,7 @@
   font-weight: 700;
 }
 
+/* OpenWeather 날씨 아이콘을 분홍 원 안에 배치한다. */
 .weatherIcon {
   display: inline-flex;
   align-items: center;
@@ -132,6 +141,7 @@
   height: 60px;
 }
 
+/* 5일 예보 전체 박스이다. */
 .forecast {
   border: 1px solid #d8d8d8;
   border-radius: 5px;
@@ -152,6 +162,7 @@
   border-top: 1px solid #d8d8d8;
 }
 
+/* 날짜 행 전체를 버튼으로 만들어 키보드 접근성과 클릭 영역을 확보한다. */
 .dayButton {
   display: flex;
   align-items: center;
@@ -180,6 +191,7 @@
   transition: transform 160ms ease;
 }
 
+/* aria-expanded 상태에 맞춰 화살표 방향을 위/아래로 바꾼다. */
 .dayButton[aria-expanded='true'] .chevron {
   transform: rotate(225deg);
 }
@@ -193,6 +205,7 @@
   padding: 0 30px 18px;
 }
 
+/* 펼쳐진 날짜 안의 3시간 단위 예보 행이다. */
 .forecastItem {
   display: flex;
   align-items: center;
@@ -228,6 +241,7 @@
   font-size: 30px;
 }
 
+/* 상세 페이지도 메인과 같은 반응형 조건을 적용한다. */
 @media (min-width: 1280px) {
   .shell {
     width: 1280px;
